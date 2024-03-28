@@ -19,7 +19,7 @@ title: Trebles lair # the main title
 tagline: test # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  My blog, with all the funky projects i do
+  My blog, with all the funky projects i do.
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
