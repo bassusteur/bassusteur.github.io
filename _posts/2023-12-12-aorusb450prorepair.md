@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Aorus B450 pro motherboard repair
+title: Gigabyte Aorus B450 pro motherboard repair
 ---
 
 # Aorus B450 pro repair
