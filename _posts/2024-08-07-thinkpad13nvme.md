@@ -9,7 +9,7 @@ so i left it at that for the time being.
 
 some weeks later i decided to check out the boardview and schematic of the lenovo laptop, to my unexperienced eyes nothing looked off and nvme should have just worked, being that in the schematic
 it showed all the components for pcie present, but my friend i was talking to at the time took a look at the files and in the specsheets she noticed it mentioned the m.2 slot being sata only,
-not only that but the design on the schematic by Quanta, she said, did not follow pcie spec, and put capacitors on the device side of one of the receiving pcie diffpairs.  
+not only that but the design on the schematic by Quanta, she said, did not follow pcie spec, and [put capacitors on the device side of one of the receiving pcie diffpairs.](https://github.com/user-attachments/assets/84771b44-804d-449d-a28c-5a9eb1dad497)  
 
 So enough talking done, i got to disassembling the laptop and getting down to desolder two capacitors, C224 and C237, and bridging them with some magnet wire,
 it was kind of difficult but nothing some flux and holding a steady hand can't fix. 
@@ -18,12 +18,13 @@ The end result isn't exactly eye candy but that's not what matters, what matters
 
 
 Laptop reassembled, with a drive chucked from my main machine, i tried booting it up but no luck the drive would not show up in the bios entries nor linux, 
-though as a tip from my friend i would apparently also need to bridge two other pads (PEDET and GND) for the ssd to be detected by the PCH,  
+though as a tip from my friend i would apparently also need to bridge two other pads [(PEDET and GND)](https://github.com/user-attachments/assets/807ed9ac-0f56-4f43-aea4-028ddc73a5bb) for the ssd to be detected by the PCH,  
 because despite the components being present on the boardview and schematic they were not ultimately placed during assembly.
 ![c150c6af6f544226](https://github.com/user-attachments/assets/f1ebd3a9-682c-41c5-9b0f-7b0e58dfb861)
 
 Preparing for what should be the final test i once again borrowed an ssd from my main laptop, which runs debian btw, painstakingly reassembled the keyboard and 
 booted the machine.
+
 It worked! the ssd is now recognized with just a single lane which gets me approximately 1GB/s throughput, 
 though UEFI won't let me boot from it i can access the files from a live iso so it could just be a matter of updating uefi entries for this machine or trying to install
 an OS from scratch on a new drive.
